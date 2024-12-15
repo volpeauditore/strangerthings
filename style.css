@@ -1,0 +1,171 @@
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Variáveis CSS */
+:root {
+  --primary-color: #ff0000; /* Vermelho do Stranger Things */
+  --secondary-color: #333; /* Cor de fundo escuro */
+  --text-color: #fff;
+  --light-background: #f0f0f0;
+  --dark-background: #1a1a1a;
+  --highlight-color: #00ff00; /* Verde para destaque */
+  --button-color: #ff5500;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Estilizando o Body */
+body {
+  background-color: var(--dark-background);
+  color: var(--text-color);
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: var(--secondary-color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+header .logo img {
+  width: 150px;
+}
+
+.theme-toggle {
+  background-color: var(--button-color);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.theme-toggle:hover {
+  background-color: #ff8800;
+}
+
+/* Seção Intro */
+#intro {
+  background-image: url('laboratorio-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+#intro .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#intro h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+#intro p {
+  font-size: 1.5em;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Personagens */
+#characters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 50px;
+  background-color: var(--secondary-color);
+}
+
+.character {
+  width: 150px;
+  text-align: center;
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+.character img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.character p {
+  margin-top: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.character:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Formulário */
+#form {
+  background-color: var(--light-background);
+  padding: 50px;
+  text-align: center;
+}
+
+#form h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+#form input, #form textarea {
+  width: 60%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#form button {
+  background-color: var(--button-color);
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+#form button:hover {
+  background-color: #ff8800;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #characters {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #form input, #form textarea {
+    width: 80%;
+  }
+}
